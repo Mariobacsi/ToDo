@@ -4,10 +4,16 @@ export default {
     public: {url: '/', static: true},
     src: {url: '/dist'},
   },
+  alias: {
+    components: './src/components',
+    '@': './src',
+  },
   plugins: [
     '@snowpack/plugin-vue',
     '@snowpack/plugin-vue/plugin-tsx-jsx.js',
     '@snowpack/plugin-dotenv',
+    /* Enable to optimize files for production */
+    // '@snowpack/plugin-webpack',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
